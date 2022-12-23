@@ -14,7 +14,7 @@
 
 set -eu
 # Get arguments from submit_job_array.sh
-base=$1
+bids=$1
 study=$2
 option=$3
 args=($@)
@@ -24,8 +24,8 @@ echo $sub
 
 mkdir -p $base/derivatives/fastsurfer_${option}
 
-singularity exec --nv -B $base:/data \
-                      -B $base/derivatives/fastsurfer_${option}:/output \
+singularity exec --nv -B $bids:/data \
+                      -B $bids/derivatives/fastsurfer_${option}:/output \
                       -B /scratch/jsein/BIDS/freesurfer:/fs \
                        /scratch/jsein/my_images/fastsurfer-gpu.sif \
                        /fastsurfer/run_fastsurfer.sh \
