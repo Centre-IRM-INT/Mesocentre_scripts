@@ -1,0 +1,3 @@
+id0,id1,img
+sub-pilote1,task-rest,fmriprep/sub-pilote1/func/sub-pilote1_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+sub-pilote2,task-rest,fmriprep/sub-pilote2/func/sub-pilote2_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz

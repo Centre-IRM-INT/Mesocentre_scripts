@@ -1,0 +1,8 @@
+{
+    "dwi": {
+        "datatype": "dwi",
+	"pattern": "rec-phase",
+        "suffix": "dwi"
+    }
+}
+
