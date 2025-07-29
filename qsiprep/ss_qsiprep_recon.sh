@@ -1,7 +1,7 @@
 #!/bin/bash
 ##SBATCH -p gpu
-#SBATCH -p skylake
-##SBATCH --gres=gpu:2
+#SBATCH -p volta
+#SBATCH --gres=gpu:2
 #SBATCH --mail-type=ALL 			# Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=julien.sein@univ-amu.fr	# Your email address
 #SBATCH -A b163
@@ -13,6 +13,7 @@
 #SBATCH -o ./log/%x-%A-%a.out
 #SBATCH -e ./log/%x-%A-%a.err
 #SBATCH -J qsirecon_EcriPark	# Descriptive job name
+
 #SBATCH --mail-type=BEGIN,END
 #### END OF JOB DEFINITION  #####
 
@@ -41,3 +42,5 @@ singularity run  -B /scratch/jsein/BIDS:/work,$HOME/.templateflow:/home/qsiprep/
 
  #--skip-odf-reports     mrtrix_multishell_msmt_ACT-hsvs   mrtrix_singleshell_ss3t_ACT-hsvs  --stop-on-first-crash
  # mrtrix_multishell_msmt_pyafq_tractometry --nv
+
+
